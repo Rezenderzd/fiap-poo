@@ -1,0 +1,7 @@
+/br/
+/module-info.class
+*.class
+.vscode/
+bin/
+target/
+
