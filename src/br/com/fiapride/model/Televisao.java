@@ -6,28 +6,35 @@ public class Televisao {
 	private int polegadas;
 	private String modelo;
 	private String tipoImagem;
-	private int canalAtual;
-	private int volumeAtual;
+	private int canalAtual = 10;
+	private int volumeAtual = 20;
 	
-	public Televisao(int polegadas, String modelo, String tipoImagem, int canalAtual, int volumeAtual) {
+	public Televisao(int polegadas, String modelo, String tipoImagem) {
         this.setPolegadas(polegadas);
         this.setModelo(modelo);
         this.setTipoImagem(tipoImagem);
-        this.setCanalAtual(canalAtual);
-        this.setVolumeAtual(volumeAtual);
+        //this.setCanalAtual(canalAtual);
+        //this.setVolumeAtual(volumeAtual);
     }
 	
 	public void mudarVolume(int volumeAtual ) {
-		if(volumeAtual>50) {
-			this.volumeAtual = volumeAtual/2;
-			System.out.println("Volume atual é: "+ volumeAtual);
-			return;
+		if(volumeAtual<0){
+			this.setVolumeAtual(0);
 		}
+		if(volumeAtual>50) {
+			volumeAtual = volumeAtual/2;
+			//System.out.println("Volume atual é: "+ volumeAtual);
+		}
+		this.setVolumeAtual(volumeAtual);
 	}
 	public void mudarCanal(int quantidadeMudarCanal, int canalAtual) {
-		this.canalAtual = canalAtual + quantidadeMudarCanal;
-		System.out.println("O canal atual é:"+ canalAtual);
-		return;
+		canalAtual = canalAtual + quantidadeMudarCanal;
+		if(canalAtual<=0){
+			this.setCanalAtual(0);
+			return;
+		}
+		this.setCanalAtual(canalAtual);
+		//System.out.println("O canal atual é:"+ canalAtual);
 	}
 
 	public int getPolegadas() {
@@ -76,7 +83,4 @@ public class Televisao {
 		}
 		this.volumeAtual = volumeAtual;
 	}
-
-	// Nota: Por enquanto usamos 'public' para facilitar o aprendizado.
-    // Nas próximas aulas, aprenderemos a proteger esses dados.
 }
