@@ -8,11 +8,13 @@ public class Televisao {
 	private String tipoImagem;
 	private int canalAtual = 10;
 	private int volumeAtual = 20;
+	private Controle intermediador;
 	
-	public Televisao(int polegadas, String modelo, String tipoImagem) {
+	public Televisao(int polegadas, String modelo, String tipoImagem, Controle controleUtlizado) {
         this.setPolegadas(polegadas);
         this.setModelo(modelo);
         this.setTipoImagem(tipoImagem);
+		this.intermediador = controleUtlizado;
         //this.setCanalAtual(canalAtual);
         //this.setVolumeAtual(volumeAtual);
     }
@@ -35,6 +37,10 @@ public class Televisao {
 		}
 		this.setCanalAtual(canalAtual);
 		//System.out.println("O canal atual é:"+ canalAtual);
+	}
+
+	public Controle getControle(){
+		return this.intermediador;
 	}
 
 	public int getPolegadas() {
