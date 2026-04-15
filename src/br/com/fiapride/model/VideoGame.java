@@ -8,7 +8,7 @@ public class VideoGame extends Eletrodomestico{
         this.isDisclVersion = isDisclVersion;
     }
 
-    public boolean getisDisclVersion() {
+    public boolean getIsDiscVersion() {
         return isDisclVersion;
     }
 }
