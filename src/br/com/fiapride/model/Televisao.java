@@ -1,7 +1,7 @@
 package br.com.fiapride.model;
 
 //A Classe define a estrutura. Ela não é o passageiro real, é apenas o modelo
-public class Televisao {
+public class Televisao extends Eletrodomestico{
 	// Atributos (Características)
 	private int polegadas;
 	private String modelo;
@@ -10,8 +10,9 @@ public class Televisao {
 	private int volumeAtual = 20;
 	private Controle intermediador;
 	
-	public Televisao(int polegadas, String modelo, String tipoImagem, Controle controleUtlizado) {
-        this.setPolegadas(polegadas);
+	public Televisao(String marca, int anoDeLancamento, double preco, int polegadas, String modelo, String tipoImagem, Controle controleUtlizado) {
+		super(marca, anoDeLancamento, preco);
+		this.setPolegadas(polegadas);
         this.setModelo(modelo);
         this.setTipoImagem(tipoImagem);
 		this.intermediador = controleUtlizado;
