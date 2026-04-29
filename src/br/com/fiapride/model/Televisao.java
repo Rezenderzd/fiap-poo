@@ -10,8 +10,8 @@ public class Televisao extends Eletrodomestico{
 	private int volumeAtual = 20;
 	private Controle intermediador;
 	
-	public Televisao(String marca, int anoDeLancamento, double preco, int polegadas, String modelo, String tipoImagem, Controle controleUtlizado) {
-		super(marca, anoDeLancamento, preco);
+	public Televisao(String marca, int anoDeLancamento, double preco, double consumoEmWattsHora, int polegadas, String modelo, String tipoImagem, Controle controleUtlizado) {
+		super(marca, anoDeLancamento, preco, consumoEmWattsHora);
 		this.setPolegadas(polegadas);
         this.setModelo(modelo);
         this.setTipoImagem(tipoImagem);

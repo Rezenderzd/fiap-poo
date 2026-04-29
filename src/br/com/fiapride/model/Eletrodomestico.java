@@ -4,11 +4,13 @@ public class Eletrodomestico {
     private String marca;
     private int anoDeLancamento;
     private double preco;
+    private double consumoEmWattsHora;
 
-    public Eletrodomestico (String marca, int anoDeLancamento, double preco){
+    public Eletrodomestico (String marca, int anoDeLancamento, double preco, double consumoEmWattsHora){
         this.setPreco(preco);
         this.setMarca(marca);
         this.setAnoDeLancamento(anoDeLancamento);
+        this.consumoEmWattsHora = consumoEmWattsHora;
     }
 
     public String getMarca() {
@@ -33,5 +35,14 @@ public class Eletrodomestico {
 
     private void setPreco(double preco) {
         this.preco = preco;
+    }
+
+    public double getConsumoEmWattsHora() {
+        return consumoEmWattsHora;
+    }
+
+    public void calcularConsumo (int quantidadeDeHoras) {
+        double consumo = (getConsumoEmWattsHora() * quantidadeDeHoras)/1000;
+        System.out.printf("Consumo foi de %.2f reais\n", consumo);
     }
 }
