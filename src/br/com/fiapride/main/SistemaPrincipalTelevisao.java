@@ -1,9 +1,6 @@
 package br.com.fiapride.main;
 
-import br.com.fiapride.model.Controle;
-import br.com.fiapride.model.Eletrodomestico;
-import br.com.fiapride.model.Televisao;
-import br.com.fiapride.model.VideoGame;
+import br.com.fiapride.model.*;
 
 public class SistemaPrincipalTelevisao {
 	public static void main(String[] args) {
@@ -39,6 +36,14 @@ public class SistemaPrincipalTelevisao {
 
 		televisao1.calcularConsumo(100);
 		playstation.calcularConsumo(50);
+
+		Celular iphone = new Celular("Iphone 14");
+		Predio predio = new Predio();
+		Carro ferrari = new Carro("AFG-9839", "Ferrari");
+		System.out.println("---É possível movê-lo?---");
+		System.out.printf("Predio: %b\n", predio.isDeslocavel());
+		System.out.printf("Celular: %b\n", iphone.isDeslocavel());
+		System.out.printf("Carro: %b\n", ferrari.isDeslocavel());
 
 	}
 }
