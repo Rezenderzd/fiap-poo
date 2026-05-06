@@ -90,4 +90,10 @@ public class Televisao extends Eletrodomestico{
 		}
 		this.volumeAtual = volumeAtual;
 	}
+
+	@Override
+	public void calcularConsumo (int quantidadeDeHoras) {
+		double consumo = (getConsumoEmWattsHora() * quantidadeDeHoras)/1000;
+		System.out.printf("Consumo foi de %.2f reais\n", consumo);
+	}
 }

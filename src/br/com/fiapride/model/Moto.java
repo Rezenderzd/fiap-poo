@@ -8,17 +8,16 @@ public class Moto extends Veiculo {
         super(placa, modelo);
     }
 
-    public void setIsEletrica (boolean isEletrica) {
-        this.isEletrica = isEletrica;
+    @Override
+    public void exibirTipo() {
+        System.out.println("Sou uma Moto");
     }
 
     public boolean isEletrica() {
         return this.isEletrica;
     }
 
-    @Override
-    public String calcularAutonomia() {
-        double kmRestante = this.getNivelCombustivel() * 35.0;
-        return "Autonomia: " + kmRestante + " km (Consumo de 35 km/l).";
+    public void setIsEletrica (boolean isEletrica) {
+        this.isEletrica = isEletrica;
     }
 }

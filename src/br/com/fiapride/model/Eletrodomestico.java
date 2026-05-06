@@ -1,6 +1,6 @@
 package br.com.fiapride.model;
 
-public class Eletrodomestico {
+public abstract class Eletrodomestico {
     private String marca;
     private int anoDeLancamento;
     private double preco;
@@ -41,8 +41,5 @@ public class Eletrodomestico {
         return consumoEmWattsHora;
     }
 
-    public void calcularConsumo (int quantidadeDeHoras) {
-        double consumo = (getConsumoEmWattsHora() * quantidadeDeHoras)/1000;
-        System.out.printf("Consumo foi de %.2f reais\n", consumo);
-    }
+    public abstract void calcularConsumo (int quantidadeDeHoras);
 }

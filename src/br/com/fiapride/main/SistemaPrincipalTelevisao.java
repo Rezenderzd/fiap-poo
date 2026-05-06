@@ -1,6 +1,7 @@
 package br.com.fiapride.main;
 
 import br.com.fiapride.model.Controle;
+import br.com.fiapride.model.Eletrodomestico;
 import br.com.fiapride.model.Televisao;
 import br.com.fiapride.model.VideoGame;
 
@@ -9,6 +10,10 @@ public class SistemaPrincipalTelevisao {
 		// INSTANCIAÇÃO
         // O comando 'new' aloca memória para um novo objeto.
         // Criando o primeiro passageiro (Objeto 1)
+
+		//Retorna "Eletrodomestico is abstract; cannot be instantiated"
+		//Eletrodomestico eletrodomestico =  new Eletrodomestico("Samsung", 2022, 1700, 30);
+
 		Controle controle1 = new Controle(22, "Samsung");
 
 		Televisao televisao1 = new Televisao ("Lg",2010, 1.500, 100,32, "Tubo", "4K", controle1);

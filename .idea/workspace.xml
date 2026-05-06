@@ -25,9 +25,17 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/projeto java/fiap-poo"
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/projeto-visual-studio-code/projeto java faculdade/fiap-poo"
   }
 }]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.31033.145" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="d72f0318-a2ce-4d45-b2b1-521a2990acfc" name="Changes" comment="" />
